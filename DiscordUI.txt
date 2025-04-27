@@ -2,11 +2,11 @@ local ts = game:GetService("TweenService")
 
 -- // Settings here \\ --
 
-local ServerName = "cats are so cool"
+local ServerName = "FloppHub Team"
 
-local invite = "https://discord.gg/nWQCUsMwX6"
+local invite = "https://dsc.gg/flopphub-team"
 
-local image = "104088700984161"
+local image = "123791375210767"
 
 --◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇--
 
@@ -100,7 +100,7 @@ Members.Size = UDim2.new(1, -80, 0, 20)
 
 Members.Position = UDim2.new(0, 70, 0, 65)
 
-Members.Text = "● 69 Online    ● 69m Members"
+Members.Text = "● 60 Online    ● 500 Members"
 
 Members.Font = Enum.Font.Gotham
 
