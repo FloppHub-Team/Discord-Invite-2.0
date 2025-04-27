@@ -144,6 +144,24 @@ local tw2 = ts:Create(DiscordFrame, TweenInfo.new(0.5, Enum.EasingStyle.Quad, En
 
 tw2:Play()
 
+local CloseButton = Instance.new("TextButton")
+CloseButton.Size = UDim2.new(0, 25, 0, 25)
+CloseButton.Position = UDim2.new(1, -30, 0, 5)
+CloseButton.Text = "X"
+CloseButton.Font = Enum.Font.GothamBold
+CloseButton.TextSize = 16
+CloseButton.TextColor3 = Color3.fromRGB(228, 228, 228)
+CloseButton.BackgroundColor3 = Color3.fromRGB(255, 50, 50)
+CloseButton.Parent = DiscordFrame
+
+local cn4 = Instance.new("UICorner")
+cn4.CornerRadius = UDim.new(0, 6)
+cn4.Parent = CloseButton
+
+CloseButton.MouseButton1Click:Connect(function()
+    DiscordInvite:Destroy()
+end)
+
 JoinShit.MouseButton1Click:Connect(function()
 
 setclipboard(invite)
