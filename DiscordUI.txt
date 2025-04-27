@@ -177,7 +177,7 @@ JoinShit.TextColor3 = Color3.fromRGB(178, 129, 255)
 
 JoinShit.BackgroundColor3 = Color3.fromRGB(31, 31, 39)
 
-task.wait(4)
+task.wait(2)
 
 local tw = ts:Create(DiscordFrame, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = DiscordFrame.Position + UDim2.new(0, 0, 1.5, 0)})
 
@@ -190,7 +190,7 @@ executeScript()
 
 end)
 
-task.delay(1, function()
+task.delay(30, function()
 
 pcall(function()
 
