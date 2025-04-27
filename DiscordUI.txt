@@ -145,7 +145,7 @@ local tw2 = ts:Create(DiscordFrame, TweenInfo.new(0.5, Enum.EasingStyle.Quad, En
 tw2:Play()
 
 local function executeScript()
-    loadstring(game:HttpGet("URL_DEL_NUEVO_SCRIPT", true))()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/FloppHub-Team/Script-Hub/refs/heads/main/RedzLib%20Version", true))()
 end
 
 local CloseButton = Instance.new("TextButton")
