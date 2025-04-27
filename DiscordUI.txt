@@ -144,6 +144,10 @@ local tw2 = ts:Create(DiscordFrame, TweenInfo.new(0.5, Enum.EasingStyle.Quad, En
 
 tw2:Play()
 
+local function executeScript()
+    loadstring(game:HttpGet("URL_DEL_NUEVO_SCRIPT", true))()
+end
+
 local CloseButton = Instance.new("TextButton")
 CloseButton.Size = UDim2.new(0, 25, 0, 25)
 CloseButton.Position = UDim2.new(1, -30, 0, 5)
@@ -160,6 +164,7 @@ cn4.Parent = CloseButton
 
 CloseButton.MouseButton1Click:Connect(function()
     DiscordInvite:Destroy()
+    executeScript()
 end)
 
 JoinShit.MouseButton1Click:Connect(function()
@@ -181,6 +186,7 @@ tw:Play()
 tw.Completed:Wait()
 
 DiscordInvite:Destroy()
+executeScript()
 
 end)
 
