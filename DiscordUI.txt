@@ -1,0 +1,183 @@
+local ts = game:GetService("TweenService")
+
+-- // Settings here \\ --
+
+local ServerName = "cats are so cool"
+
+local invite = "https://discord.gg/nWQCUsMwX6"
+
+local image = "104088700984161"
+
+--◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇--
+
+local DiscordInvite = Instance.new("ScreenGui")
+
+DiscordInvite.Name = "DiscordInviteUI"
+
+DiscordInvite.Parent = game.CoreGui
+
+local DiscordFrame = Instance.new("Frame")
+
+DiscordFrame.Size = UDim2.new(0, 420, 0, 130)
+
+DiscordFrame.Position = UDim2.new(0.5, -210, 0, -200)
+
+DiscordFrame.BackgroundColor3 = Color3.fromRGB(24, 24, 30)
+
+DiscordFrame.BorderSizePixel = 0
+
+DiscordFrame.Parent = DiscordInvite
+
+local cn1 = Instance.new("UICorner")
+
+cn1.CornerRadius = UDim.new(0, 8)
+
+cn1.Parent = DiscordFrame
+
+local SigmaText = Instance.new("TextLabel")
+
+SigmaText.Size = UDim2.new(1, -20, 0, 25)
+
+SigmaText.Position = UDim2.new(0, 10, 0, 10)
+
+SigmaText.Text = "YOU'VE BEEN INVITED TO JOIN A SERVER"
+
+SigmaText.Font = Enum.Font.GothamMedium
+
+SigmaText.TextSize = 14
+
+SigmaText.TextColor3 = Color3.fromRGB(178, 129, 255)
+
+SigmaText.BackgroundTransparency = 1
+
+SigmaText.TextXAlignment = Enum.TextXAlignment.Left
+
+SigmaText.Parent = DiscordFrame
+
+local MangoPhonkPfp = Instance.new("ImageLabel")
+
+MangoPhonkPfp.Size = UDim2.new(0, 50, 0, 50)
+
+MangoPhonkPfp.Position = UDim2.new(0, 10, 0, 56)
+
+MangoPhonkPfp.AnchorPoint = Vector2.new(0, 0.5)
+
+MangoPhonkPfp.Image = "rbxassetid://" .. image
+
+MangoPhonkPfp.BackgroundTransparency = 1
+
+MangoPhonkPfp.Parent = DiscordFrame
+
+local cn3 = Instance.new("UICorner")
+
+cn3.CornerRadius = UDim.new(1, 0)
+
+cn3.Parent = MangoPhonkPfp
+
+local CatsAreSoCool = Instance.new("TextLabel")
+
+CatsAreSoCool.Size = UDim2.new(1, -80, 0, 20)
+
+CatsAreSoCool.Position = UDim2.new(0, 70, 0, 45)
+
+CatsAreSoCool.Text = ServerName
+
+CatsAreSoCool.Font = Enum.Font.GothamBold
+
+CatsAreSoCool.TextSize = 18
+
+CatsAreSoCool.TextColor3 = Color3.fromRGB(228, 222, 255)
+
+CatsAreSoCool.BackgroundTransparency = 1
+
+CatsAreSoCool.TextXAlignment = Enum.TextXAlignment.Left
+
+CatsAreSoCool.Parent = DiscordFrame
+
+local Members = Instance.new("TextLabel")
+
+Members.Size = UDim2.new(1, -80, 0, 20)
+
+Members.Position = UDim2.new(0, 70, 0, 65)
+
+Members.Text = "● 69 Online    ● 69m Members"
+
+Members.Font = Enum.Font.Gotham
+
+Members.TextSize = 14
+
+Members.TextColor3 = Color3.fromRGB(178, 129, 255)
+
+Members.BackgroundTransparency = 1
+
+Members.TextXAlignment = Enum.TextXAlignment.Left
+
+Members.Parent = DiscordFrame
+
+local JoinShit = Instance.new("TextButton")
+
+JoinShit.Size = UDim2.new(1, -20, 0, 32)
+
+JoinShit.Position = UDim2.new(0, 10, 1, -42)
+
+JoinShit.Text = "Join"
+
+JoinShit.Font = Enum.Font.GothamMedium
+
+JoinShit.TextSize = 16
+
+JoinShit.TextColor3 = Color3.fromRGB(228, 228, 228)
+
+JoinShit.BackgroundColor3 = Color3.fromRGB(87, 242, 135)
+
+JoinShit.AutoButtonColor = false
+
+JoinShit.Parent = DiscordFrame
+
+local cn2 = Instance.new("UICorner")
+
+cn2.CornerRadius = UDim.new(0, 6)
+
+cn2.Parent = JoinShit
+
+local tw2 = ts:Create(DiscordFrame, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = UDim2.new(0.5, -210, 0.5, -65)})
+
+tw2:Play()
+
+JoinShit.MouseButton1Click:Connect(function()
+
+setclipboard(invite)
+
+JoinShit.Text = "Joined"
+
+JoinShit.TextColor3 = Color3.fromRGB(178, 129, 255)
+
+JoinShit.BackgroundColor3 = Color3.fromRGB(31, 31, 39)
+
+task.wait(4)
+
+local tw = ts:Create(DiscordFrame, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = DiscordFrame.Position + UDim2.new(0, 0, 1.5, 0)})
+
+tw:Play()
+
+tw.Completed:Wait()
+
+DiscordInvite:Destroy()
+
+end)
+
+task.delay(25, function()
+
+pcall(function()
+
+local tw = ts:Create(DiscordFrame, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = DiscordFrame.Position + UDim2.new(0, 0, 1.5, 0)})
+
+tw:Play()
+
+tw.Completed:Wait()
+
+DiscordInvite:Destroy()
+
+end)
+
+end)
