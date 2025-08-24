@@ -100,7 +100,7 @@ Members.Size = UDim2.new(1, -80, 0, 20)
 
 Members.Position = UDim2.new(0, 70, 0, 65)
 
-Members.Text = "● 60 Online    ● 500 Members"
+Members.Text = "● 60 Online    ● 700 Members"
 
 Members.Font = Enum.Font.Gotham
 
